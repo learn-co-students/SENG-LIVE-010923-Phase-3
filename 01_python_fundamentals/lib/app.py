@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-# 📚 Review With Students:
+# 📚 Review:
     # Python environment set up
 	# Python debugging tools 
 	# Python datatypes 
