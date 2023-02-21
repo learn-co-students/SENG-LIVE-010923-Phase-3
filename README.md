@@ -23,7 +23,7 @@
 
 ## 1: Python Fundamentals
 ### Lecture Goals:
-- Review an introduction to Python and phase trajectory 
+- Introduce Python and phase trajectory 
 - Demonstrate Python package management with `pip`
 - Demonstrate debugging in Python with `shell`, `print`, and `ipdb`
 - Review Python data types (`str`, `int`, `float`, `bool`, `None`)
