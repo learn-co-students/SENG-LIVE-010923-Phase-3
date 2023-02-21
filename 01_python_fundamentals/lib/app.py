@@ -122,27 +122,44 @@ def say_hello(name = "Student"):
     # pet_greeting("Spot", "Rowdy!") => "Spot needs a walk."
     # pet_greeting("Bud", "Relaxed") => "Bud is all good."
 
-def pet_status(pet_name, pet_mood):
-    if pet_mood == "Hungry!":
-        print(f"{pet_name} needs to be fed.")
-    elif pet_mood == "Rowdy!":
-        print(f"{pet_name} needs a walk.") 
-    else:
-        print(f"{pet_name} is all good.")
+# def pet_status(pet_name, pet_mood):
+#     if pet_mood == "Hungry!":
+#         print(f"{pet_name} needs to be fed.")
+#     elif pet_mood == "Rowdy!":
+#         print(f"{pet_name} needs a walk.") 
+#     else:
+#         print(f"{pet_name} is all good.")
 
     # Take a moment to note that "pet_name" and "pet_mood" parameters are within Local Scope and take priority over "pet_name" and "pet_mood"
     # in Global Scope.
 
-pet_status("Rose", "Hungry!")
-pet_status("Spot", "Rowdy!")
-pet_status("Bud", "Feisty!")
+# pet_status("Rose", "Hungry!")
+# pet_status("Spot", "Rowdy!")
+# pet_status("Bud", "Feisty!")
 
 # 6. ✅ Create a function (pet_birthday) that will increment a pet's age up by 1. Use try / except to handle errors. 
     # If our function is given an incorrect datatype, it should handle the TypeError exception and alert the user
     # pet_birthday(10) => "Happy Birthday! Your pet is now 11."
     # pet_birthday("oops") => "Type Error Occurred"
 
+def pet_birthday(age = 0):
+    
+    # ipdb.set_trace()
+    
+    try:
+        age = age + 1
+        print(f"Happy Birthday! Your pet is now {age}")
+    except TypeError:
+        print("Type Error Occurred!")
+    # except NameError:
+    #     print("Name Error Occurred!")
+
+
     # Note => To view more common Python exceptions, visit https://docs.python.org/3/library/exceptions.html
+
+# pet_birthday(10)
+# pet_birthday("10")
+pet_birthday()
 
 # 🚨 To create an ipdb breakpoint, comment / uncomment line below:
 # ipdb.set_trace()
