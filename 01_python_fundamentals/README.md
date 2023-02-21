@@ -11,6 +11,3 @@
 - Review Python variable scope and the `global` keyword
 - Review Python error messages and exceptions 
 - Demonstrate handling errors with `try:` and `except:`
-- Stretch Goals
-    - Review `pytest`
-    - Review the Python Style Guide

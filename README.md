@@ -32,9 +32,6 @@
 - Review Python variable scope and the global keyword
 - Review Python error messages and exceptions 
 - Demonstrate handling errors with `try:` and `except:` 
-- Stretch Goals
-    - Review `pytest`
-    - Review the Python Style Guide
 
 ### Lecture Topics:
 - Python and a Short History
@@ -75,11 +72,6 @@
         - `NameError`
         - `TypeError`
         - `try:` `except:`
-- Stretch Topics
-    - `pytest`
-        - How to Read Tests 
-            - Note: Create tests is not covered in the labs
-    - Python Style Guide
 
 ## 2: Python Data Structures
 ### Lecture Goals:
@@ -93,9 +85,6 @@
 - Demonstrate Set types with `set()` and `frozenset()`
 - Demonstrate `for` and `while` loops
 - Demonstrate list compressions 
-- Stretch Goals
-    - Demonstrate Generator expressions 
-    - Demonstrate how to create a `switch` using a Dictionary
 
 ### Lecture Topics:
 - Sequence Types
@@ -116,8 +105,6 @@
     - List Compression
 - Sequence Operators
 - Sequence Functions and Methods
-- Stretch Topics
-    - Generator Expressions 
 
 ## 3: Object Oriented Programming in Python (Part 1)
 ### Lecture Goals:
@@ -129,9 +116,6 @@
 - Demonstrate `__init__`
 - Demonstrate instance method
 - Demonstrate the `self` keyword 
-- Stretch Goals
-    - Demonstrate object properties
-    - Demonstrate mass assignment during Class instantiation
 
 ### Lecture Topics:
 - Object Oriented Programming 
@@ -142,8 +126,6 @@
 - Initializing with Attributes Using `__init__`
 - Instance Methods
 - Self
-- Stretch Topics
-    - Object Properties
 
 ## 4: Object Oriented Programming in Python (Part 2)
 ### Lecture Goals:
@@ -157,16 +139,12 @@
     - `@classmethod`
     - `cls` keyword 
 - Object Inheritance
-- Stretch Goals
-    - Super
 
 ### Lecture Topics:
 - Decorators
 - Class Variables
 - Class Methods
 - Object Inheritance
-- Stretch Topic
-    - Super
 
 ## 5: SQL Fundamentals & Table Relations
 ### Lecture Goals:
@@ -199,9 +177,6 @@
     - Save => Persist created instance to DB
     - Create => Instantiate / persist created instance to DB, return new instance 
 - Demonstrate query methods to find and retrieve resources 
-- Stretch Goal
-    - Make a `create_and_find_by` member
-    - Make `update` and `delete` members
 
 ### Lecture Topics:
 - The benefits of ORM
@@ -266,8 +241,6 @@
 - Demonstrate querying methods to view table relationships
 - Demonstrate a “one to many” association
 - Demonstrate a “many to many” association with a join model 
-- Stretch Goal
-    - Demonstrate using a CLI to access a backend application
 
 ### Lecture Topics:
 - Design Database Tables
@@ -278,6 +251,3 @@
 - Alembic Migrations to Generate Table Relationships
 - Relation Query Methods 
 - Many-to-Many 
-- Stretch Topic
-    - Making a CLI
-
