@@ -85,10 +85,10 @@ def say_hello(name = "Student"):
     # Unless We've Supplied a Default Argument
 
 # Without Argument, Default Value "Student" Kicks In
-say_hello()
+# say_hello()
 
 # With Argument, We See Expected Output
-say_hello("Louis")
+# say_hello("Louis")
 
 # ipdb.set_trace()
 
@@ -96,6 +96,22 @@ say_hello("Louis")
     # Test invocation of "pet_greeting" in ipdb using "pet_greeting()"
     # pet_greeting("Rose") => "Rose says hello!"
     # pet_greeting("Spot") => "Spot says hello!"
+
+# Global Scope
+name = "Bud"
+
+# Function Scope
+def pet_greeting():
+    print(f"{name} says hello!")
+
+# Invoke Functions With / Without Passed Args
+# pet_greeting()
+# pet_greeting("Rose")
+# pet_greeting("Spot")
+
+pet_greeting()
+# pet_greeting()
+
 
 # 5. ✅ Move conditional logic from Deliverable 1 into a function (pet_status) so that we may use it with different pets / moods
     # Test invocation of "pet_status" in ipdb using "pet_status(pet_name, pet_mood)"
