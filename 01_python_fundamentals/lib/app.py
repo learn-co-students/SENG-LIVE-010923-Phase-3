@@ -165,6 +165,19 @@ def pet_birthday(age = "0.1"):
 # pet_birthday("10")
 # pet_birthday()
 
+
+def test_data_type(arg):
+    if isinstance(arg, str):
+        print("Argument is a String")
+    if isinstance(arg, int):
+        print("Argument is an Integer")
+    if isinstance(arg, float):
+        print("Argument is a Float")
+
+test_data_type("Test")
+test_data_type(0)
+test_data_type(0.1)
+
 # 🚨 To create an ipdb breakpoint, comment / uncomment line below:
 # ipdb.set_trace()
 
