@@ -142,13 +142,17 @@ def say_hello(name = "Student"):
     # pet_birthday(10) => "Happy Birthday! Your pet is now 11."
     # pet_birthday("oops") => "Type Error Occurred"
 
-def pet_birthday(age = 0):
+def pet_birthday(age = "0.1"):
     
     # ipdb.set_trace()
     
+    # Attempt to Execute Code
     try:
         age = age + 1
         print(f"Happy Birthday! Your pet is now {age}")
+    
+    # If An Error of a Particular Type Occurs,
+    # Execute Some Other Bit Of Code
     except TypeError:
         print("Type Error Occurred!")
     # except NameError:
@@ -159,7 +163,7 @@ def pet_birthday(age = 0):
 
 # pet_birthday(10)
 # pet_birthday("10")
-pet_birthday()
+# pet_birthday()
 
 # 🚨 To create an ipdb breakpoint, comment / uncomment line below:
 # ipdb.set_trace()
