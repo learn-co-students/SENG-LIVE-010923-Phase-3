@@ -6,7 +6,7 @@
 # Mutable
 # Creating Lists
 #1. ✅ Create a list of 10 pet names
-pet_names = ['', '', 'Rose', 'Rose', 'Meow Meow Beans', 'Mr.Legumes', 'Luke', 'Lea', 'Princess Grace', 'Spot', 'Tom', 'Mini', 'Paul']
+pet_names = ['Rose', 'Meow Meow Beans', 'Mr.Legumes', 'Luke', 'Lea', 'Princess Grace', 'Spot', 'Tom', 'Mini', 'Paul']
 
 # Reading Information From Lists
 #2. ✅ Return the first pet name
@@ -236,14 +236,14 @@ pet_info_spot_2 = dict(name='Spot', age=25, breed='boxer', temperament="relaxed"
 # Loops 
 pet_info = [
     {
-        'name':'Rose',
-        'age':11,
-        'breed': 'domestic long-haired',
-    }, 
-    {
         'name':'Spot',
         'age':25,
         'breed': 'boxer',
+    },
+    {
+        'name':'Rose',
+        'age':11,
+        'breed': 'domestic long-haired',
     },
     {
         'name':'Meow Meow Beans',
@@ -252,19 +252,45 @@ pet_info = [
     }
 ]
 
-#34. ✅ Loop through a range of 10 and print every number within the range
+pet_info_2 = [
+    {
+        'name':'Bud',
+        'age':5,
+        'breed': 'golden retriever',
+    }, 
+    {
+        'name':'Princess Grace',
+        'age':9,
+        'breed': 'persian',
+    },
+    {
+        'name':'WiFi',
+        'age':4,
+        'breed': 'wolf',
+    }
+]
 
+#34. ✅ Loop through a range of 10 and print every number within the range
+# for num in range(10):
+#     print(num)
 
 #35. ✅ Loop through a range between 50 and 60 that iterates by 2 and print every number
-
+# for num in range(50, 60, 2):
+#     print(num)
 
 #36. ✅ Loop through the "pet_info" list and print every dictionary 
-
+# for pet in pet_info:
+#     print(pet)
 
 #37. ✅ Create a function that takes a list a parameter 
     # The function should use a "for" loop to loop through the list and print each item 
     # Invoke the function and pass it "pet_names" as an argument
+# def loop_through_list(list):
+#     for pet in list:
+#         print(pet)
 
+# loop_through_list(pet_info)
+# loop_through_list(pet_info_2)
 
 #38. ✅ Create a function that takes a list as a parameter
     # The function should define a counter and set it to 0
@@ -273,29 +299,84 @@ pet_info = [
         # Every loop should increase the count by 1
     # Return the counter 
 
+# def demonstrate_while(list):
+#     counter = 0
+    
+#     while(counter < len(list) - 1):
+#         counter += 1
+    
+#     return counter
+
+# print(demonstrate_while(pet_names))
+
 
 #39. ✅ Create a function that updates the age of a given pet
-        # The function should take a list of "dictionaries", "name" and "age" as parameters 
-        # Create an index variable and set it to 0
-        # Create a while loop 
-            # The loop will continue so long as the list does not contain a name matching the "name" param 
+        # DONE - The function should take a list of "dictionaries", "name" and "age" as parameters 
+        # DONE - Create an index variable and set it to 0
+        # DONE - Create a while loop 
+            # DONE - The loop will continue so long as the list does not contain a name matching the "name" param 
             # and the index is less then the length of the list
-            # Every list will increase the index by 1
+            # DONE - Every list will increase the index by 1
         # If the dictionary containing a matching name is found, update the item's age with the new age 
             # Otherwise, return 'Pet not found'
-    
 
+# def update_pet_age(list, name, age):
+    
+#     index = 0
+    
+#     while(list[index]['name'] != name and index < len(list) - 1):
+#         index += 1
+
+#         if (list[index]['name'] == name):
+#             list[index]['age'] = age
+
+#             return list
+        
+#         else:
+#             return 'Pet Not Found!'
+
+# Pet Does Exist / Age is Updated
+# print(update_pet_age(pet_info, 'Spot', 50))
+
+# Pet Does Not Exist / "Pet Not Found"
+# print(update_pet_age(pet_info, 'Bud', 50))
+
+# List Comprehensions => []
 # map like 
 #40. ✅ Use list comprehension to return a list containing every pet name from "pet_info" changed to uppercase
-
+# print(pet_info)
+# new_pet_list = [pet.get('name').upper() for pet in pet_info]
+# print(new_pet_list)
+# print(pet_info)
 
 # find like
 #41. ✅ Use list comprehension to find a pet named spot
 
+# spot = [RETURNED PET / LOOP / CONDITIONAL]
+# spot = [pet for pet in pet_info if pet.get("name") == 'Spot' ]
+# print(spot)
 
 # filter like
 #42. ✅ Use list comprehension to find all of the pets under 3 years old
 
+# young_pets = [RETURNED PET / LOOP / CONDITIONAL]
+# young_pets = [pet for pet in pet_info if pet.get("age") < 2]
+# print(len(young_pets))
 
+# Generator Expression => ()
 #43. ✅ Create a generator expression matching the filter above
 
+    # Main Benefit => Less Memory Intensive
+
+young_pets = (pet for pet in pet_info if pet.get("age") < 26)
+
+# Accessing Generator Object Values
+
+# 1. Using next()
+print(next(young_pets))
+print(next(young_pets))
+print(next(young_pets))
+
+# 2. Using a for loop
+for pet in young_pets:
+    print(pet)
