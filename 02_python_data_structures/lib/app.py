@@ -6,7 +6,7 @@
 # Mutable
 # Creating Lists
 #1. ✅ Create a list of 10 pet names
-pet_names = ['Rose', 'Rose', 'Meow Meow Beans', 'Mr.Legumes', 'Luke', 'Lea', 'Princess Grace', 'Spot', 'Tom', 'Mini', 'Paul']
+pet_names = ['', '', 'Rose', 'Rose', 'Meow Meow Beans', 'Mr.Legumes', 'Luke', 'Lea', 'Princess Grace', 'Spot', 'Tom', 'Mini', 'Paul']
 
 # Reading Information From Lists
 #2. ✅ Return the first pet name
@@ -55,7 +55,7 @@ pet_names = ['Rose', 'Rose', 'Meow Meow Beans', 'Mr.Legumes', 'Luke', 'Lea', 'Pr
 
 #8. ✅ Return the frequency of a given element => .count()
 
-# print(pet_names.count('Rose'))
+# print(pet_names.count(''))
 # print(pet_names.count('Bud'))
 
 # Updating Lists
@@ -122,32 +122,43 @@ pet_names = ['Rose', 'Rose', 'Meow Meow Beans', 'Mr.Legumes', 'Luke', 'Lea', 'Pr
 # print(pet_names)
 
 #Tuple
+# Why Are Tuples Immutable?
+    # What advantages does this provide for us? In what situations
+    # would this serve us?
+
+    # Helps us to preserve our data, keep it from being
+    # changed or altered in any way.
+
 # 📚 Review:
     # Mutable, Immutable <=> Changeable, Unchangeable
 
 #17. ✅ Create a Tuple of 10 pet ages => () 
-
+pet_ages = (1,2,3,4,5,6,7,8,9,10)
 
 #18. ✅ Print the first pet age => []
+# print(pet_ages[-1])
 
 
 # Testing Mutability 
 #19. ✅ Attempt to remove an element with ".pop" (should error)
 
+# pet_ages.pop()
+# AttributeError: 'tuple' object has no attribute 'pop'
 
 #20. ✅ Attempt to change the first element (should error) => []
+# pet_ages[0] = 2
+# TypeError: 'tuple' object does not support item assignment
 
 
 # Tuple Methods
 #21. ✅ Return the frequency of a given element => .count()
-
+# print(pet_ages.count(1))
 
 #22. ✅ Return the index of a given element  => .index()
-
+# print(pet_ages.index(1))
 
 #23. ✅ Create a Range 
 # Note:  Ranges are primarily used in loops
-
 
 # Sets (Stretch Goal)
 #24. ✅ Create a set of 3 pet foods
