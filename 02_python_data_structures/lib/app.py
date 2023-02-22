@@ -3,55 +3,123 @@
 # Note: use print() to execute the examples. Comment out examples as needed to keep your Terminal
 # output clean.
 
+# Mutable
 # Creating Lists
 #1. ✅ Create a list of 10 pet names
-pet_names = ['Rose', 'Meow Meow Beans', 'Mr.Legumes', 'Luke', 'Lea', 'Princess Grace', 'Spot', 'Tom', 'Mini', 'Paul']
+pet_names = ['Rose', 'Rose', 'Meow Meow Beans', 'Mr.Legumes', 'Luke', 'Lea', 'Princess Grace', 'Spot', 'Tom', 'Mini', 'Paul']
 
 # Reading Information From Lists
 #2. ✅ Return the first pet name
 
+# print(pet_names[0])
+# print(pet_names[-2])
+
 
 #3. ✅ Return all pet names beginning from the 3rd index
 
+# Inclusive
+# print(pet_names[3:])
 
 #4. ✅ Return all pet names before the 3rd index
 
+# Exclusive
+# print(pet_names[:3])
 
-#5. ✅ Return all pet names beginning from the 3rd index and up to the 7th
 
+#5. ✅ Return all pet names beginning from the 3rd index and "up to" (exclusive) the 7th
+
+# Inclusive
+# print(pet_names[3:8])
+    # Luke => 3
+    # Tom => 7
+
+# Exclusive
+# print(pet_names[3:7])
+    # Luke => 3
+    # Spot => 6
 
 #6. ✅ Find the index of a given element => .index()
+# print(pet_names.index('Rose'))
+# print(pet_names.index('Paul'))
 
+# print(pet_names.index('Bud'))
+    # ValueError
 
 #7. ✅ Reverse the original list => .reverse()
 
+# Mutative (Destructive)
+    # Demonstrates the Mutability of Lists
+
+# print(pet_names.reverse())
+# print(pet_names)
 
 #8. ✅ Return the frequency of a given element => .count()
 
+# print(pet_names.count('Rose'))
+# print(pet_names.count('Bud'))
 
 # Updating Lists
 #9. ✅ Change the first name to all uppercase letters => .upper()
 
+# pet_names[0] = pet_names[0].upper()
+
+# print(pet_names)
+# print(some_variable)
 
 #10. ✅ Append a new name to the list => .append()
 
+# Mutative (Destructive)
+
+# pet_names.append('Bud')
+# print(pet_names)
 
 #11. ✅ Add a new name at a specific index => .insert()
 
+# Argument 1 => Index
+# Argument 2 => Value
+# pet_names.insert(0, "Bud")
+# pet_names.insert(1, "Sally")
+
+# pet_names.insert(-1, "Sally")
+# pet_names.append("Sally")
+
+# print(pet_names)
 
 #12. ✅ Add two lists together => +
 
+# new_pet_list = pet_names + ["Bud", "Sally"]
+# print(new_pet_list)
+
+# number_list = [1,2,3] + [4,5,6]
+# print(number_list)
 
 #13. ✅ Remove the final element from the list => .pop()
 
+# print(pet_names)
+
+# Mutative (Destructive)
+# pet_names.pop()
+# print(pet_names)
 
 #14. ✅ Remove element by specific index => .pop()
+
+# print(pet_names)
+# pet_names.pop(-1)
+# print(pet_names)
 
 
 #15. ✅ Remove a specific element => .remove()
 
+# print(pet_names)
+# pet_names.remove('Rose')
+# pet_names.remove('Rose')
+# print(pet_names)
 
 #16. ✅ Remove all pet names from the list => .clear()
+
+# print(pet_names)
+# pet_names.clear()
+# print(pet_names)
 
 #Tuple
 # 📚 Review:
