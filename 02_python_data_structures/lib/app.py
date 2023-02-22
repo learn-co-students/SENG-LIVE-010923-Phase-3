@@ -157,48 +157,81 @@ pet_ages = (1,2,3,4,5,6,7,8,9,10)
 #22. ✅ Return the index of a given element  => .index()
 # print(pet_ages.index(1))
 
+# BREAK PERIOD POINT
+
 #23. ✅ Create a Range 
 # Note:  Ranges are primarily used in loops
 
-# Sets (Stretch Goal)
+# print(range(60))
+
+# Sets
 #24. ✅ Create a set of 3 pet foods
 pet_fav_food = {'house plants', 'fish', 'bacon'}
 
 # Dictionaries 
 # Creating 
 #25. ✅  Create a dictionary of pet information with the keys "name", "age" and "breed"
+
+# Looks Like...JSON
+
 pet_info_rose = {'name':'Rose', 'age':11, 'breed':'domestic long'}
+pet_info_spot = {'name':'Spot', 'age':5, 'breed':'persian'}
 
 
 #26. ✅  Use dict to create a dictionary of pet information with the keys "name", "age" and "breed" => dict(...)
-pet_info_spot = dict(name='Spot', age=25, breed='boxer')
+pet_info_spot_1 = {'name': 'Spot', 'age': 25, 'breed':'boxer', 'temperament': 'relaxed'}
+pet_info_spot_2 = dict(name='Spot', age=25, breed='boxer', temperament="relaxed")
+
+    # Main advantage of using "dict" => Less Keystrokes (Less Quotes to Write Into Code)
+
+# print(pet_info_spot_1)
+# print(pet_info_spot_2)
 
 # Reading
 #27. ✅ Print the pet attribute of "name" using bracket notation 
+
+# print(pet_info_rose['name'])
 # print(pet_info_rose['temperament'])
+    # KeyError: 'temperament'
 
 #28. ✅ Print the pet attribute of "age" using ".get"
 
     # Note: ".get" is preferred over bracket notation in most cases 
     # because it will return "None" instead of an error
 
+# print(pet_info_rose.get('temperament', 'Attribute Not Found!')) # Returns None
 
 # Updating 
 #29. ✅ Update Rose's age to 12 => []
+# print(pet_info_rose)
+# pet_info_rose['temperament'] = 'chill'
+# print(pet_info_rose)
 
 
 #30. ✅ Update Spot's age to 26 => .update({...})
+# print(pet_info_spot)
+# pet_info_spot.update({'temperament': 'chill'})
+# print(pet_info_spot)
 
 
 # Deleting
 #31. ✅ Delete Rose's age using the "del" keyword => []
 
+# print(pet_info_rose)
+# del pet_info_rose['age']
+# print(pet_info_rose)
 
 #32. ✅ Delete Spot's age using ".pop"
 
+# print(pet_info_rose)
+# pet_info_rose.pop('age')
+# print(pet_info_rose)
 
 #33. ✅ Delete the last item for Rose using "popitem()"
 
+# print(pet_info_rose)
+# pet_info_rose.popitem()
+# print(pet_info_rose)
 
 # Loops 
 pet_info = [
