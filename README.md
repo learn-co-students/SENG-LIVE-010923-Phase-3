@@ -12,7 +12,7 @@
 
 | Lecture | Notes | Videos | Starter | Solution |
 | ------- | :---: | ------ | ------- | -------- |
-| 1. (02/21/23) Python Fundamentals     |  [Notes](#)     |  [Video](#)      |    [Starter](#)     |   [Solution](#)       |
+| 1. (02/21/23) Python Fundamentals     |  [Notes](https://github.com/learn-co-students/SENG-LIVE-010923-Phase-3/compare/main...01_notes)     |  [Video](https://vimeo.com/801004522)      |    [Starter](https://github.com/learn-co-students/SENG-LIVE-010923-Phase-3/tree/main/01_python_fundamentals)     |   [Solution](https://github.com/learn-co-students/SENG-LIVE-010923-Phase-3/tree/01_notes/01_python_fundamentals)       |
 | 2. (02/22/23) Python Data Structures     |  [Notes](#)     |   [Video](#)     |    [Starter](#)     |    [Solution](#)        |
 | 3. (02/23/23) Object Oriented Programming in Python (Part 1)     |  [Notes](#)     |  [Video](#)      |   [Starter](#)      |    [Solution](#)      |
 | 4. (02/24/23) Object Oriented Programming in Python (Part 2)     |   [Notes](#)    |   [Video](#)     |   [Starter](#)      |  [Solution](#)        |
