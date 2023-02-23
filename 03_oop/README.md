@@ -10,6 +10,4 @@
 - Demonstrate `__init__`
 - Demonstrate instance method
 - Demonstrate the `self` keyword 
-- Stretch Goals
-    - Demonstrate object properties
-    - Demonstrate mass assignment during Class instantiation
+- Demonstrate object properties

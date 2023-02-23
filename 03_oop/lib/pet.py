@@ -1,50 +1,53 @@
-#!/usr/bin/env python3
-# Demonstrate classes 
+# !/usr/bin/env python3
+    # Defines the location of the Python interpreter
+    # See More => https://stackoverflow.com/a/7670338/8655247
+
+import ipdb
+
+# Classes
+
 # 1. ✅ Create a Pet class
-# 2. ✅ Instantiate a few pet instance 
-    # Compare the pet instances to demonstrate they are not the same object
-    # Note: add 'pass' to the pet class 
 
+    # Note: Add 'pass' to the Pet class 
 
-class Pet:
-    # pass
+# 2. ✅ Instantiate a few Pet instances
+
+    # Compare the Pet instances. Are each of them the same object?
+
 # 3. ✅ Demonstrate __init__ 
+
     # Add arguments to instances  
-    # use dot notation to access their attributes 
-    # update attributes with new values 
+    
+    # Use dot notation to access each Pet instance's attributes 
 
+    # Update attributes with new values
 
-# 4.✅ Demonstrate instance methods by creating a print_pet_details function that will print the pet attributes
-#     Review the self keyword 
-#     Invoke the print_pet_details on an instance 
-#           -> 
-            # name:rose
-            # age:11
-            # breed:domestic longhair
-            # temperament:sweet
-            # image_url:rose.jpg
+# Instance Methods
 
+# 4. ✅ Create a "print_pet_details" function that will print each Pet instance's 
+# attributes
 
-# Demonstrate instances 
-    # Different Instances are Different Objects
-# Demonstrate __init__
-# Demonstrate instance method
-# Demonstrate the self keyword 
-# Stretch Goals
-# Demonstrate object properties
+    # Review the "self" keyword 
+    
+    # Invoke "print_pet_details" on an instance 
+    
+    # Example Terminal Ouput:
+        # name: Rose
+        # age: 11
+        # breed: Domestic Longhair
+        # temperament: Sweet
 
-# Instances 
+# Object Properties => Attributes that are controlled by methods
 
-# Run in ipdb session
-# rose == cookie
-#   False
+    # Create an Owner class with two instance methods:
 
-#Read Attributes 
-# rose.name -> rose
-# rose.age -> 11
+        # get_name => Retrieve Owner's name
+        
+        # set_name => Set Owner's name
 
-#Update
-# rose.age -> 11
-# rose.age = 12
-# rose.age -> 12
+            # Ensure that Owner's name is a String
 
+            # If not, issue warning of "Name must be a string"
+
+    # Use property() to compile get_name / set_name and invoke them
+    # whenever we access an Owner instance's name
