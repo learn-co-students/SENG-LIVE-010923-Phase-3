@@ -1,3 +1,7 @@
+# Decorators => Application Value is Reducing Redundance Within Classes
+
+# Inheritance => Application Value is Reducing Redundance Across Classes
+
 # 1. ✅ First Class Functions
 # "[We can] assign them to variables, store them in data structures, pass them as arguments
 # to other functions, and even return them as values from other functions."
