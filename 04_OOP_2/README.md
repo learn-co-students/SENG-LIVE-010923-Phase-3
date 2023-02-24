@@ -1,12 +1,12 @@
-# OOP 2: Class Methods & Class Variables
+# OOP 2: Class Methods & Class Attributes
 
 ## Learning Goals
 
 - Demonstrate Decorators 
     - `@decorator`
-- Demonstrate class variables
-    - Defining class variables
-    - Updating class variables 
+- Demonstrate class attributes
+    - Defining class attributes
+    - Updating class attributes
 - Demonstrate class methods
     - Defining class methods 
     - `@classmethod`
