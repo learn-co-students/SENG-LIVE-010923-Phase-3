@@ -14,7 +14,7 @@
 | ------- | :---: | ------ | ------- | -------- |
 | 1. (02/21/23) Python Fundamentals     |  [Notes](https://github.com/learn-co-students/SENG-LIVE-010923-Phase-3/compare/main...01_notes)     |  [Video](https://vimeo.com/801004522)      |    [Starter](https://github.com/learn-co-students/SENG-LIVE-010923-Phase-3/tree/main/01_python_fundamentals)     |   [Solution](https://github.com/learn-co-students/SENG-LIVE-010923-Phase-3/tree/01_notes/01_python_fundamentals)       |
 | 2. (02/22/23) Python Data Structures     |  [Notes](https://github.com/learn-co-students/SENG-LIVE-010923-Phase-3/commits/02_notes/02_python_data_structures)     |   [Video](https://vimeo.com/801381989)     |    [Starter](https://github.com/learn-co-students/SENG-LIVE-010923-Phase-3/tree/main/02_python_data_structures)     |    [Solution](https://github.com/learn-co-students/SENG-LIVE-010923-Phase-3/tree/02_notes/02_python_data_structures)        |
-| 3. (02/23/23) Object Oriented Programming in Python (Part 1)     |  [Notes](#)     |  [Video](#)      |   [Starter](#)      |    [Solution](#)      |
+| 3. (02/23/23) Object Oriented Programming in Python (Part 1)     |  [Notes](https://github.com/learn-co-students/SENG-LIVE-010923-Phase-3/commits/03_notes/03_oop)     |  [Video](https://vimeo.com/801748590)      |   [Starter](https://github.com/learn-co-students/SENG-LIVE-010923-Phase-3/tree/main/03_oop)      |    [Solution](https://github.com/learn-co-students/SENG-LIVE-010923-Phase-3/tree/03_notes/03_oop)      |
 | 4. (02/24/23) Object Oriented Programming in Python (Part 2)     |   [Notes](#)    |   [Video](#)     |   [Starter](#)      |  [Solution](#)        |
 | 5. (02/27/23) SQL Fundamentals & Table Relations     |  [Notes](#)     |   [Video](#)     |   [Starter](#)      |   [Solution](#)         |
 | 6. (02/28/23) Object-Relational Mapping (ORM)     |   [Notes](#)    |   [Video](#)     |    [Starter](#)     |   [Solution](#)       |
@@ -131,9 +131,9 @@
 ### Lecture Goals:
 - Demonstrate Decorators 
     - `@decorator`  
-- Demonstrate class variables
-    - Defining class variables
-    - Updating class variables 
+- Demonstrate class attributes
+    - Defining class attributes
+    - Updating class attributes
 - Demonstrate class methods
     - Defining class methods 
     - `@classmethod`
@@ -142,7 +142,7 @@
 
 ### Lecture Topics:
 - Decorators
-- Class Variables
+- Class Attributes
 - Class Methods
 - Object Inheritance
 
