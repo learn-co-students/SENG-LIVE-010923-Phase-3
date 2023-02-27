@@ -102,7 +102,7 @@ A relational database is a database of tables and rows with data points that rel
 
 
 #### Delete Tables
-DROP TABLE dogs;
+DROP TABLE owners;
 
 #### Create the Tables for pets and owners 
 
