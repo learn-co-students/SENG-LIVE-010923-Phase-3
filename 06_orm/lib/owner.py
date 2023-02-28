@@ -1,4 +1,4 @@
-# Stretch Goal: Build Out Corresponding Owner Class Methods
+# Stretch Goal: Build Out Corresponding Owner Class / Instance Methods
 
 # Owner Attributes: 
 # name: string 
