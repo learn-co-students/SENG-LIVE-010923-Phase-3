@@ -92,7 +92,9 @@ class Pet:
     # ✅ 6. Add "new_from_db" Class Method to Retrieve Newest "pet" Instance w/ Attributes From DB
 
     @classmethod
-    def new_from_db(cls, row):
+    def create_instance(cls, row):
+        
+        # Reinstantiating the Class
         pet = cls(
             name=row[1],
             species=row[2],
@@ -110,15 +112,52 @@ class Pet:
             SELECT * FROM pets
         """
 
-        return [cls.new_from_db(row) for row in CURSOR.execute(sql).fetchall()]
+        return [cls.create_instance(row) for row in CURSOR.execute(sql).fetchall()]
+        
+        # return CURSOR.execute(sql).fetchall() # => Gives us a List of Pet Tuple Objects
 
     # ✅ 8. Add "find_by_name" Class Method to Retrieve "pet" Instance by "name" Attribute From DB
 
         # If No "pet" Found, return "None"
 
+    @classmethod
+    def find_by_name(cls, name):
+        sql = """
+            SELECT * FROM pets
+            WHERE name = ?
+            LIMIT 1
+        """
+
+        row = CURSOR.execute(sql, (name, )).fetchone()
+    
+        # Return None is no "row" is found
+        if not row:
+            return None
+
+        # Instantiate Pet class with Tuple values / Return Instance
+        return Pet.create_instance(row)
+
     # ✅ 9. Add "find_by_id" Class Method to Retrieve "pet" Instance by "id" Attribute From DB
 
         # If No "pet" Found, return "None"
+
+    @classmethod
+    def find_by_id(cls, id):
+        sql = """
+            SELECT * FROM pets
+            WHERE id = ?
+            LIMIT 1
+        """
+
+        # If record is found, "row" will be assigned Tuple value
+        row = CURSOR.execute(sql, (id, )).fetchone()
+
+        # Return None is no "row" is found
+        if row:
+            return Pet.create_instance(row)
+
+        # Instantiate Pet class with Tuple values / Return Instance
+        return None
 
     # ✅ 10. Add "find_or_create_by" Class Method to:
 
@@ -126,4 +165,52 @@ class Pet:
 
         # If No "pet" Found, Create New "pet" Instance w/ All Attributes
 
-    # ✅ 11. Add "update" Class Method to Find "pet" Instance by "id" and Update All Attributes
+    # Pet.find_or_create_by("spot", "dog", "boxer", "chill")
+
+        # If we find a record, return that record expressed as a Python object
+
+        # If we don't, instantiate / persist the new Pet
+
+    @classmethod
+    def find_or_create_by(cls, name=None, species=None, breed=None, temperament=None):
+        
+        # SQL Query to Find Pet If It Exists
+        sql = """
+            SELECT * FROM pets
+            WHERE (name, species, breed, temperament) = (?, ?, ?, ?)
+            LIMIT 1
+        """
+
+        row = CURSOR.execute(sql, (name, species, breed, temperament)).fetchone()
+
+        # If We Don't Find Matching Record...
+        if not row: 
+            
+            # SQL Query for Inserting New Record into pets Table
+            sql = """
+                INSERT INTO pets (name, species, breed, temperament)
+                VALUES (?, ?, ?, ?)
+            """
+
+            # Execution of SQL
+            CURSOR.execute(sql, (name, species, breed, temperament))
+
+            return Pet.find_by_name(name)
+
+        return Pet.create_instance(row)
+
+    # ✅ 11. Add "update" Method to Find "pet" Instance by "id" and Update All Attributes
+
+    # spot.name = "new name"
+    # spot.breed = "new breed"
+    # spot.update()
+
+    def update(self):
+        sql = """
+            UPDATE pets
+            SET name = ?,
+                breed = ?
+            WHERE id = ?
+        """
+
+        CURSOR.execute(sql, (self.name, self.breed, self.id))

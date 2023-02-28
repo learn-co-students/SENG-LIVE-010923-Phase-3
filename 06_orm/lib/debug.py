@@ -8,12 +8,9 @@ from pet import Pet, CONN, CURSOR
 # frank.save()
 
 Pet.create_table()
-spot = Pet("spot", "dog", "chihuahua", "feisty")
-rex = Pet("rex", "dog", "boxer", "chill")
-grace = Pet("grace", "cat", "siamese", "mysterious")
 
-spot.save()
-rex.save()
-grace.save()
+Pet.create("spot", "dog", "chihuahua", "feisty")
+Pet.create("rex", "dog", "boxer", "chill")
+Pet.create("grace", "cat", "siamese", "mysterious")
 
 import ipdb; ipdb.set_trace()
