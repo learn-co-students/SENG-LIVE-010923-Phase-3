@@ -1,16 +1,24 @@
 #1. ✅ Build out Pet Model
 
 # Import from sqlalchemy: PrimaryKeyConstraint, Column, String, Integer
-
 # Import from sqlalchemy.ext.declarative, declarative_base  
+from sqlalchemy import (PrimaryKeyConstraint, Column, String, Integer)
+from sqlalchemy.ext.declarative import declarative_base
 
 #1.a ✅ Initialize declarative_base and assign it to a variable called Base
 
+Base = declarative_base()
+
 #1.b ✅ Create a class Pet that inherits from Base
 
-    # Set the "__tablename__" to 'pets
-    # Add table args for a primary key constraint based off the id
+class Pet(Base):
 
+    # Set the "__tablename__" to 'pets
+    __tablename__ = 'pets'
+    
+    # Add table args for a primary key constraint based off the id
+    __table_args__ = (PrimaryKeyConstraint('id'), )
+    
     #Create the following columns
         # id -> type integer
         # name -> type string
@@ -19,8 +27,23 @@
         # temperament -> type string
         # owner_id -> type integer 
 
+    id = Column(Integer())
+    name = Column(String())
+    species = Column(String())
+    breed = Column(String())
+    temperament = Column(String())
+    owner_id = Column(Integer())
+
     # Add a __repr__ method that returns a string containing the id, name, species, breed and temperament of our class
     
+    def __repr__(self):
+        return f"Id: {self.id}," 
+        + f"Name: {self.name}"
+        + f"Species: {self.species}"
+        + f"Breed: {self.breed}"
+        + f"Temperament: {self.temperament}"
+        + f"Owner ID: {self.owner_id}"
+
 #Note: Nothing further goes in this file.
 
 # In the the following section, we will generate a number of folders and files
