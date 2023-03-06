@@ -3,9 +3,10 @@
 # Pet >- Owner
 
 # Import Foreign Key
-from sqlalchemy import (PrimaryKeyConstraint, Column, String, Integer, Float,  DateTime)
+from sqlalchemy import (PrimaryKeyConstraint, Column, String, Integer, Float,  DateTime, ForeignKey)
 
 # Import relationship and backref from sqlalchemy.orm 
+from sqlalchemy.orm import relationship, backref
 from sqlalchemy.ext.declarative import declarative_base
 
 Base = declarative_base()
@@ -21,16 +22,19 @@ class Pet(Base):
     temperament = Column(String())
     
     #1.a ✅ Add  ForeignKey('owners.id') to owner)id
-    owner_id = Column(Integer())
+    owner_id = Column(Integer(), ForeignKey('owners.id'))
     
     def __repr__(self):
         return f"Id: {self.id}, " \
             + f"Name:{self.name}, " \
-            + f"Species {self.species}, "\
-            + f"Breed {self.breed}, "\
-            + f"Species {self.temperament}"
+            + f"Species: {self.species}, "\
+            + f"Breed: {self.breed}, "\
+            + f"Temperament: {self.temperament}"
 
 #1.b ✅ Add an Owners table 
+class Owner(Base):
+    __tablename__ = 'owners'
+    __table_args__ = (PrimaryKeyConstraint('id'),)
 
     #Create the following columns
     # id -> type integer
@@ -38,11 +42,24 @@ class Pet(Base):
     # email -> type string
     # phone -> type int
     # address -> type string
+
+    id = Column(Integer())
+    name = Column(String())
+    email = Column(String())
+    phone = Column(Integer())
+    address = Column(String())
     
     #1.c ✅ Associate the Pet model with the Owner model
         # relationship('Pet', backref=backref('pet'))
+    pets = relationship('Pet', backref=backref('pet'))
     
     # Add a __repr__ method that returns a string containing the id, name, email, phone and address of our class
+    def __repr__(self):
+        return f"Id: {self.id}, " \
+            + f"Name:{self.name}, " \
+            + f"Email: {self.email}, "\
+            + f"Phone: {self.phone}, "\
+            + f"Address: {self.address}"
 
 #2. ✅ Update your migrations by running `alembic revision --autogenerate -m "add pets and owners tables"` 
 # followed by `alembic upgrade head` 
