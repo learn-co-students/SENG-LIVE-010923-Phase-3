@@ -1,7 +1,7 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
-from models import (Base, Owner, Pet)
+from models import (Base, Owner, Pet, Job, Handler)
 
 if __name__ == '__main__':
 
@@ -22,7 +22,7 @@ if __name__ == '__main__':
     owners_pets = session.query(Pet).filter_by(id=first_owner.id)
 
     # Print out the Owner's pets
-    print([pet for pet in owners_pets])
+    # print([pet for pet in owners_pets])
   
     # Getting a Pet's Owner
     
@@ -32,7 +32,7 @@ if __name__ == '__main__':
     # Use session.query and .filter_by() to get the owner associated with this pet
     pet_owner = session.query(Owner).filter_by(id=first_pet.owner_id)
 
-    print([owner for owner in pet_owner])
+    # print([owner for owner in pet_owner])
 
     # 4. ✅ Head back to models.py to build out a Many to Many association
 #--------------------------------------------
@@ -40,12 +40,19 @@ if __name__ == '__main__':
 # 6. ✅ Many to Many 
     
     # Use session.query and .first() to get the first handler
-   
+    first_handler = session.query(Handler).first()
+
     # Use session.query and .filter_by() to grab the handler_jobs
-    
-    # Print the handler_jobs
- 
+    handler_jobs = session.query(Job).filter_by(handler_id=first_handler.id)
+
+    # Handler Associated with Job
+    print([job for job in handler_jobs])
+
     # Use 'handler_jobs' to query pets for the associated pet to each job
+    handler_pets = [session.query(Pet).get(job.pet_id) for job in handler_jobs]
+    
+    # Pet Associated with Job
+    print([pet for pet in handler_pets])
 
     # Optional breakpoint for debugging
     import ipdb; ipdb.set_trace()
