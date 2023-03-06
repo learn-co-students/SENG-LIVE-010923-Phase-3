@@ -1,7 +1,7 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
-from models import (Base, Owner, Pet, Handler, Job)
+from models import (Base, Owner, Pet)
 
 if __name__ == '__main__':
 
@@ -11,32 +11,34 @@ if __name__ == '__main__':
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    #3✅ One to Many
-    #Getting an owners pets
-    #Use session.query and first to grab the first owner
-
-    #use session.query and filter_by to get the owners pets from Pet
-   
-    #print out your owners pets
-  
-
-    #Getting a pets owner
-    #Use session.query and first to grab the first pet
+    # 3. ✅ One to Many - Testing
     
-    #Use session.query and filter_by to get the owner associated with this pet
- 
+    # Getting an Owner's Pets
+    
+        # Use session.query and .first() to grab the first Owner
 
-    #4✅ Head back to models to build out a Many to Many 
+        # Use session.query and filter_by to get the Owner's pets from Pet
+    
+        # Print out the Owner's pets
+  
+    # Getting a Pet's Owner
+    
+        # Use session.query and .first() to grab the first pet
+        
+        # Use session.query and .filter_by() to get the owner associated with this pet
+
+    # 4. ✅ Head back to models.py to build out a Many to Many association
 #--------------------------------------------
 
-#6.✅ Many to Many 
-    #Use session.query and .first to get the first handler
-   
-    #Use session.query and the .filter_by to grab the jobs
+# 6. ✅ Many to Many 
     
-    #Print the jobs
+    # Use session.query and .first() to get the first handler
+   
+    # Use session.query and .filter_by() to grab the handler_jobs
+    
+    # Print the handler_jobs
  
-    #Use the handler_jobs to query pets for the associated pet to each job.
+    # Use 'handler_jobs' to query pets for the associated pet to each job
 
-    #Optional breakpoint for debugging
-    #import ipdb; ipdb.set_trace()
+    # Optional breakpoint for debugging
+    # import ipdb; ipdb.set_trace()
